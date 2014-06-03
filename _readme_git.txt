@@ -1,8 +1,25 @@
-git
+Git
 ===
 
 Download des Clients von
 http://git-scm.com/
+
+Git arbeitet "Root"-Folder basiert (das Repository liegt als versteckter .git Folder dann in diesem Folder),
+ .h. die Files in diesem und den darunterliegenden Ordnern sind automatisch der Versionskontrolle unterworfen.
+(Anmerkung: es können auch explizit Files ausgenommen werden)
+
+1.  Repository anlegen (im "Root"-Folder)
+=> in Folder gehen:
+git init
+
+1a. Statusabfrage
+git status
+
+2. Staging (="Verladerampe")
+Vorstufe zum Commit
+sammelt alle Änderungen/alle geänderten Files, die dann gemeinsam committed werden können
+git add .
+
 
 * Git Gui  (besser ist der GitHub-Client s.u.)
 =========
