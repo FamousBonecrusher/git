@@ -20,6 +20,10 @@ Vorstufe zum Commit
 sammelt alle Änderungen/alle geänderten Files, die dann gemeinsam committed werden können
 git add .
 
+3. Commit
+d.h. ins Archiv bringen
+git commit
+
 
 * Git Gui  (besser ist der GitHub-Client s.u.)
 =========
