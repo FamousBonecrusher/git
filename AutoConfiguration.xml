@@ -1,0 +1,4861 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="AutoConfiguration.xsl" type="text/xsl" ?>
+<AutoConfiguration>
+  <!--Machine configuration-->
+  <BaseAll>
+    <_Activation_>
+      <Dll>
+        <name>AutoConfiguration.dll</name>
+        <factoryFunction>Create</factoryFunction>
+        <arguments />
+      </Dll>
+    </_Activation_>
+    <Configuration>
+      <Name IsAbstract="true">?</Name>
+      <Settings>
+        <AutoDetectionIsEnabled Individual="true">true</AutoDetectionIsEnabled>
+      </Settings>
+      <NonVolatileStorage>
+        <Name>Storage for recovery placement</Name>
+        <Type Individual="true" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </NonVolatileStorage>
+      <CanConfiguration IsAbstract="true" />
+      <MachineFrame>
+        <Name>Machine frame</Name>
+        <Type IsAbstract="true">?</Type>
+        <MachineIo>
+          <Name>Machine input/output</Name>
+          <Type IsAbstract="true" />
+        </MachineIo>
+        <Conveyor>
+          <Name>Conveyor</Name>
+          <Type Individual="true" />
+          <Iss>Conveyor.IssLane_1</Iss>
+          <PossibleTypes IsAbstract="true" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Name>ProcessingArea_1</Name>
+            <Type IsAbstract="true">?</Type>
+            <GantriesAreDisabled Individual="true">false</GantriesAreDisabled>
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_1_L</Name>
+                <Type IsAbstract="true">X</Type>
+                <MeasureHead>
+                  <VisionSensor>
+                    <Name>Gantry_1_L.MeasureHead.camera</Name>
+                    <Type Individual="true" />
+                    <Iss>Gantry_1_L.MeasureHead.camera</Iss>
+                    <PossibleTypes LinkNode="PcbSensorTypes" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <Name>Gantry_1_L.PlaceHead</Name>
+                    <Type Individual="true" />
+                    <IssPrefix>Gantry_1_L.</IssPrefix>
+                    <PossibleTypes IsAbstract="true" />
+                    <VisionSensor>
+                      <Name>Gantry_1_L.PlaceHead.camera</Name>
+                      <Type Individual="true" />
+                      <Iss>Gantry_1_L.VHS.camera</Iss>
+                      <PossibleTypes LinkNode="HeadSensorTypes" />
+                      <NullTypeIsOk>true</NullTypeIsOk>
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Name>Gantry_1_R</Name>
+                <Type IsAbstract="true">X</Type>
+                <MeasureHead>
+                  <VisionSensor>
+                    <Name>Gantry_1_R.MeasureHead.camera</Name>
+                    <Type Individual="true" />
+                    <Iss>Gantry_1_R.MeasureHead.camera</Iss>
+                    <PossibleTypes LinkNode="PcbSensorTypes" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <Name>Gantry_1_R.PlaceHead</Name>
+                    <Type Individual="true" />
+                    <IssPrefix>Gantry_1_R.</IssPrefix>
+                    <PossibleTypes IsAbstract="true" />
+                    <VisionSensor>
+                      <Name>Gantry_1_R.PlaceHead.camera</Name>
+                      <Type Individual="true" />
+                      <Iss>Gantry_1_R.VHS.camera</Iss>
+                      <PossibleTypes LinkNode="HeadSensorTypes" />
+                      <NullTypeIsOk>true</NullTypeIsOk>
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <Name>NozzleChanger_1_L</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <Name>NozzleChanger_1_R</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <Name>DeviceLocation_1_L</Name>
+                <DevicePosition>4</DevicePosition>
+                <Type Individual="true" />
+                <TapeCutter>
+                  <Name>DeviceLocation_1_L.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes IsAbstract="true" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <Name>DeviceLocation_1_R</Name>
+                <DevicePosition>1</DevicePosition>
+                <Type Individual="true" />
+                <TapeCutter>
+                  <Name>DeviceLocation_1_R.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes IsAbstract="true" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <FC Id="L">
+                <Name>StationaryCamera_1_L.camera.FC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_1_L.camera.FC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/FC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </FC>
+              <FC Id="R">
+                <Name>StationaryCamera_1_R.camera.FC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_1_R.camera.FC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/FC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </FC>
+              <IC Id="L">
+                <Name>StationaryCamera_1_L.camera.IC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_1_L.camera.IC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/IC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </IC>
+              <IC Id="R">
+                <Name>StationaryCamera_1_R.camera.IC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_1_R.camera.IC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/IC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </IC>
+            </StationarySensors>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Name>ProcessingArea_2</Name>
+            <Type IsAbstract="true">?</Type>
+            <GantriesAreDisabled Individual="true">false</GantriesAreDisabled>
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_2_L</Name>
+                <Type IsAbstract="true">?</Type>
+                <MeasureHead>
+                  <VisionSensor>
+                    <Name>Gantry_2_L.MeasureHead.camera</Name>
+                    <Type Individual="true" />
+                    <Iss>Gantry_2_L.MeasureHead.camera</Iss>
+                    <PossibleTypes LinkNode="PcbSensorTypes" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <Name>Gantry_2_L.PlaceHead</Name>
+                    <Type Individual="true" />
+                    <IssPrefix>Gantry_2_L.</IssPrefix>
+                    <PossibleTypes IsAbstract="true" />
+                    <VisionSensor>
+                      <Name>Gantry_2_L.PlaceHead.camera</Name>
+                      <Type Individual="true" />
+                      <Iss>Gantry_2_L.VHS.camera</Iss>
+                      <PossibleTypes LinkNode="HeadSensorTypes" />
+                      <NullTypeIsOk>true</NullTypeIsOk>
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Name>Gantry_2_R</Name>
+                <Type IsAbstract="true">?</Type>
+                <MeasureHead>
+                  <VisionSensor>
+                    <Name>Gantry_2_R.MeasureHead.camera</Name>
+                    <Type Individual="true" />
+                    <Iss>Gantry_2_R.MeasureHead.camera</Iss>
+                    <PossibleTypes LinkNode="PcbSensorTypes" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <Name>Gantry_2_R.PlaceHead</Name>
+                    <Type Individual="true" />
+                    <IssPrefix>Gantry_2_R.</IssPrefix>
+                    <PossibleTypes IsAbstract="true" />
+                    <VisionSensor>
+                      <Name>Gantry_2_R.PlaceHead.camera</Name>
+                      <Type Individual="true" />
+                      <Iss>Gantry_2_R.VHS.camera</Iss>
+                      <PossibleTypes LinkNode="HeadSensorTypes" />
+                      <NullTypeIsOk>true</NullTypeIsOk>
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <Name>NozzleChanger_2_L</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <Name>NozzleChanger_2_R</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <Name>DeviceLocation_2_L</Name>
+                <DevicePosition>3</DevicePosition>
+                <Type Individual="true" />
+                <TapeCutter>
+                  <Name>DeviceLocation_2_L.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes IsAbstract="true" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <Name>DeviceLocation_2_R</Name>
+                <DevicePosition>2</DevicePosition>
+                <Type Individual="true" />
+                <TapeCutter>
+                  <Name>DeviceLocation_2_R.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes IsAbstract="true" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <FC Id="L">
+                <Name>StationaryCamera_2_L.camera.FC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_2_L.camera.FC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/FC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </FC>
+              <FC Id="R">
+                <Name>StationaryCamera_2_R.camera.FC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_2_R.camera.FC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/FC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </FC>
+              <IC Id="L">
+                <Name>StationaryCamera_2_L.camera.IC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_2_L.camera.IC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/IC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </IC>
+              <IC Id="R">
+                <Name>StationaryCamera_2_R.camera.IC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_2_R.camera.IC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/IC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </IC>
+            </StationarySensors>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </BaseAll>
+  <BaseX BaseConfiguration="BaseAll">
+    <Configuration>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X]" />
+      <MachineFrame>
+        <MachineIo>
+          <Type>IoX</Type>
+        </MachineIo>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_1_L</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoDLM" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoDLM" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/XNoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_2_L</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoDLM" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Name>Gantry_2_R</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoDLM" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/XNoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <COPLAN Id="L" OverrideAction="Insert">
+                <Name>StationaryCamera_2_L.camera.Coplan</Name>
+                <Type Individual="true" />
+                <PossibleCoplanTypes LinkNode="CoplanTypes" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </COPLAN>
+            </StationarySensors>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </BaseX>
+  <X2 BaseConfiguration="BaseX">
+    <Configuration>
+      <Name>X2</Name>
+      <MachineFrame>
+        <Type>X2</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X2</Type>
+            <Gantries>
+              <Gantry Id="L" OverrideAction="Delete" />
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XOptimizedForAutoTray" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X2Gantries2and4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X2Gantries1and3" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X2</Type>
+            <Gantries>
+              <Gantry Id="R" OverrideAction="Delete" />
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XOptimizedForAutoTray" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X2Gantries1and3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X2Gantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X2>
+  <X3 BaseConfiguration="BaseX">
+    <Configuration>
+      <Name>X3</Name>
+      <MachineFrame>
+        <Type>X3</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X3</Type>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X3Gantry4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X3Gantry1" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X3</Type>
+            <Gantries>
+              <Gantry Id="R" OverrideAction="Delete" />
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XOptimizedForAutoTray" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X3Gantry3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X3Gantry2" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X3>
+  <X4 BaseConfiguration="BaseX">
+    <Configuration>
+      <Name>X4</Name>
+      <MachineFrame>
+        <Type>X4</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4</Type>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4Gantries2and4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4Gantries1and3" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4</Type>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4Gantries1and3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4Gantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <StationarySensors>
+              <COPLAN Id="R" OverrideAction="Insert">
+                <Name>StationaryCamera_2_R.camera.Coplan</Name>
+                <Type Individual="true" />
+                <PossibleCoplanTypes LinkNode="CoplanTypes" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </COPLAN>
+            </StationarySensors>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4>
+  <X4t BaseConfiguration="X4">
+    <Configuration>
+      <Name>X4</Name>
+      <MachineFrame>
+        <Type>X4t</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X4t" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4t</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>Xt</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>Xt</Type>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4tGantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4t</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>Xt</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>Xt</Type>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4tGantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4t>
+  <X4i BaseConfiguration="BaseX">
+    <Configuration>
+      <Name>X4i</Name>
+      <MachineFrame>
+        <Type>X4i</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X4i" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4i</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>XiInverted</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>Xi</Type>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XNoAutoTray" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XNoAutoTray" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4iGantries2and4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4iGantries1and3" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <StationarySensors OverrideAction="Delete" />
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4i</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>Xi</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>XiInverted</Type>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XNoAutoTray" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes LinkNode="DeviceLocationTypes/XNoAutoTray" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4iGantries1and3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X/X4iGantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <StationarySensors OverrideAction="Delete" />
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4i>
+  <X4it BaseConfiguration="X4i">
+    <Configuration>
+      <Name>X4</Name>
+      <MachineFrame>
+        <Type>X4it</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X4it" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4it</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>XitInverted</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>Xit</Type>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4it</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>Xit</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>XitInverted</Type>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4it>
+  <CA4 BaseConfiguration="BaseX">
+    <Configuration>
+      <Name>CA4</Name>
+      <MachineFrame>
+        <Type>CA4</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/CA" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>CA4</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_1_L</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/CA" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Name>Gantry_1_R</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/CA" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Replace" LinkNode="DeviceLocationTypes/CA_24" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Replace" LinkNode="DeviceLocationTypes/CA_13" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/CA/Gantries2and4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/CA/Gantries1and3" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>CA4</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Name>Gantry_2_L</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/CA" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Name>Gantry_2_R</Name>
+                <Type>X</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/CA" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Replace" LinkNode="DeviceLocationTypes/CA_13" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Replace" LinkNode="DeviceLocationTypes/CA_24" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/X" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/CA/Gantries1and3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/CA/Gantries2and4" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </CA4>
+  <CA4eWLP BaseConfiguration="CA4">
+    <Configuration>
+      <Name>CA4eWLP</Name>
+      <MachineFrame>
+        <Type>CA4eWLP</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/CAeWLP" />
+          <Chucks OverrideAction="Insert">
+            <Chuck Id="1">
+              <Name>Chuck 1</Name>
+              <Type Individual="true">?</Type>
+              <UserMustSelectType>true</UserMustSelectType>
+              <PossibleTypes LinkNode="ChuckTypes" />
+            </Chuck>
+            <Chuck Id="2">
+              <Name>Chuck 2</Name>
+              <Type Individual="true">?</Type>
+              <UserMustSelectType>true</UserMustSelectType>
+              <PossibleTypes LinkNode="ChuckTypes" />
+            </Chuck>
+          </Chucks>
+        </Conveyor>
+      </MachineFrame>
+    </Configuration>
+  </CA4eWLP>
+  <BaseSX4DX4 BaseConfiguration="BaseAll">
+    <Configuration>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X_HCU]" />
+      <MachineFrame>
+        <Conveyor>
+          <PossibleTypes IsAbstract="true" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type IsAbstract="true">?</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>SX4Inverted</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX4</Type>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX4/Gantry4" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX4/Gantries1and3" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/SX4NoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/SX4NoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type IsAbstract="true">?</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>SX4</Type>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX4Inverted</Type>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX4/Gantries1and3" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX4/Gantry2" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <Name>DeviceLocation_2_L</Name>
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/SX4NoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <Name>DeviceLocation_2_R</Name>
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/SX4NoAutoTray" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </BaseSX4DX4>
+  <SX4 BaseConfiguration="BaseSX4DX4">
+    <Configuration>
+      <Name>SX4</Name>
+      <MachineFrame>
+        <Type Individual="true"></Type>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteSX4</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/SX4" />
+        </MachineIo>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/SX4" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type />
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX34" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX34" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <PossibleTypes OverrideAction="Insert">
+              <ProcessingAreaType>
+                <Name>SX4_HighSpeed</Name>
+                <MachineFrameType>SX4_HighSpeed</MachineFrameType>
+              </ProcessingAreaType>
+              <ProcessingAreaType>
+                <Name>SX4_Flexible</Name>
+                <MachineFrameType>SX4_Flexible</MachineFrameType>
+              </ProcessingAreaType>
+            </PossibleTypes>
+            <StationarySensors OverrideAction="Delete" />
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type />
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX34" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX34" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <PossibleTypes OverrideAction="Insert">
+              <ProcessingAreaType>
+                <Name>SX4_HighSpeed</Name>
+                <MachineFrameType>SX4_HighSpeed</MachineFrameType>
+              </ProcessingAreaType>
+              <ProcessingAreaType>
+                <Name>SX4_Flexible</Name>
+                <MachineFrameType>SX4_Flexible</MachineFrameType>
+              </ProcessingAreaType>
+            </PossibleTypes>
+          </ProcessingArea>
+        </ProcessingAreas>
+        <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+        <ManualSelectionTypes OverrideAction="Insert">
+          <MachineFrameType>
+            <Name>SX4_HighSpeed</Name>
+            <DisplayName>SX4 High Speed</DisplayName>
+          </MachineFrameType>
+          <MachineFrameType>
+            <Name>SX4_Flexible</Name>
+            <DisplayName>SX4 Flexible</DisplayName>
+          </MachineFrameType>
+        </ManualSelectionTypes>
+      </MachineFrame>
+    </Configuration>
+  </SX4>
+  <X4iS BaseConfiguration="BaseSX4DX4">
+    <Configuration>
+      <Name>SX4 Speed</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X4iS]" />
+      <MachineFrame>
+        <Type>X4iS</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X4iS" />
+        </Conveyor>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteXS</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/XS" />
+        </MachineIo>
+        <VacuumType OverrideAction="Insert">
+          <Name>Vacuum type</Name>
+          <Type Individual="true">?</Type>
+          <UserMustSelectType>true</UserMustSelectType>
+          <PossibleTypes LinkNode="VacuumTypes" />
+        </VacuumType>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4iS</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>X4iS_1L_2R</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_1_L.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_1_L.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>X4iS_1R_2L</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_1_R.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_1_R.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossiblePingTypes OverrideAction="Delete" />
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X4iS_1L" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossiblePingTypes OverrideAction="Delete" />
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X4iS_1R" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X4iS/Location_1L_2R" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X4iS/Location_1R_2L" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Insert">
+              <AspLocation Id="L">
+                <Name>DeviceLocation_1_L.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X4iS_1L" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+              <AspLocation Id="R">
+                <Name>DeviceLocation_1_R.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X4iS_1R" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+            </AspLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4iS</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>X4iS_1R_2L</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_2_L.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_2_L.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>X4iS_1L_2R</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_2_R.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_2_R.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossiblePingTypes OverrideAction="Delete" />
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X4iS_2L" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossiblePingTypes OverrideAction="Delete" />
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X4iS_2R" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X4iS/Location_1R_2L" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X4iS/Location_1L_2R" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Insert">
+              <AspLocation Id="L">
+                <Name>DeviceLocation_2_L.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X4iS_2L" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+              <AspLocation Id="R">
+                <Name>DeviceLocation_2_R.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X4iS_2R" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+            </AspLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4iS>
+  <X4iSMicron BaseConfiguration="X4iS">
+    <Configuration>
+      <Name>X4i S micron</Name>
+      <MachineFrame>
+        <Type>X4iSMicron</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20H" />
+                    <VisionSensor>
+                      <PossibleTypes LinkNode="HeadSensorType41" />
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20H" />
+                    <VisionSensor>
+                      <PossibleTypes LinkNode="HeadSensorType41" />
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20H" />
+                    <VisionSensor>
+                      <PossibleTypes LinkNode="HeadSensorType41" />
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20H" />
+                    <VisionSensor>
+                      <PossibleTypes LinkNode="HeadSensorType41" />
+                    </VisionSensor>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4iSMicron>
+  <X4S BaseConfiguration="BaseAll">
+    <Configuration>
+      <Name>X4S</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X_HCU]" />
+      <MachineFrame>
+        <Type>X4S</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/X234S" />
+        </Conveyor>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteXS</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/XS" />
+        </MachineIo>
+        <VacuumType OverrideAction="Insert">
+          <Name>Vacuum type</Name>
+          <Type Individual="true">?</Type>
+          <UserMustSelectType>true</UserMustSelectType>
+          <PossibleTypes LinkNode="VacuumTypes" />
+        </VacuumType>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X4S</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>SX4Vario_1L_2R</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_1_L.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_1_L.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX4Vario_1R_2L</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_1_R.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_1_R.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X234S_1L" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X234S_1R" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X234S/Location_1L_2R" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X234S/Location_1R_2L" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Insert">
+              <AspLocation Id="L">
+                <Name>DeviceLocation_1_L.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X234S" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+              <AspLocation Id="R">
+                <Name>DeviceLocation_1_R.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X234S" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+            </AspLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X4S</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>SX4Vario_1R_2L</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_2_L.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_2_L.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX4Vario_1L_2R</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/XS" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_2_R.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_2_R.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <!--manual selection needed: std/jtf-Table-->
+              <DeviceLocation Id="L">
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X4S_2L" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X234S_2R" />
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <COPLAN Id="R" OverrideAction="Insert">
+                <Name>StationaryCamera_2_R.camera.Coplan</Name>
+                <Type Individual="true" />
+                <PossibleCoplanTypes LinkNode="CoplanTypes" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </COPLAN>
+            </StationarySensors>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X234S/Location_1R_2L" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X4S_2R/Location" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Insert">
+              <AspLocation Id="L">
+                <Name>DeviceLocation_2_L.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X234S" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+              <AspLocation Id="R">
+                <Name>DeviceLocation_2_R.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/X234S" />
+                <AspMagazines LinkNode="AspMagazines/XS" />
+              </AspLocation>
+            </AspLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4S>
+  <X4SMicron BaseConfiguration="X4S">
+    <Configuration>
+      <Name>X4 S micron</Name>
+      <MachineFrame>
+        <Type>X4SMicron</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Gantries>
+              <Gantry Id="L">
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/X4SMicron" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/X4SMicron" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Gantries>
+              <Gantry Id="L">
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/X4SMicron" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/X4SMicron" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X4SMicron>
+  <X3S BaseConfiguration="X4S">
+    <Configuration>
+      <Name>X3S</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X3S]" />
+      <MachineFrame>
+        <Type>X3S</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X3S</Type>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X3S</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>SX3Vario_2L</Type>
+              </Gantry>
+              <Gantry Id="R" OverrideAction="Delete" />
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <UserMustSelectType OverrideAction="Delete"></UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Delete" />
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/X23S_2L" />
+              </DeviceLocation>
+            </DeviceLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X3S>
+  <X2S BaseConfiguration="X3S">
+    <Configuration>
+      <Name>X2S</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[X2S]" />
+      <MachineFrame>
+        <Type>X2S</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>X2S</Type>
+            <Gantries>
+              <Gantry Id="R">
+                <Type>X2S_1R_2L</Type>
+                <AspHead OverrideAction="Delete"></AspHead>
+              </Gantry>
+              <Gantry Id="L" OverrideAction="Delete"></Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <!--X2S does not support SmartPinSupport -> no dependency/node 'HasPinPicker'-->
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X2S/Location_1R_2L" />
+              </NozzleChanger>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X2S/Location_1L_2R" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Delete"></AspLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>X2S</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>X2S_1R_2L</Type>
+                <AspHead OverrideAction="Delete"></AspHead>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <!--X2S does not support SmartPinSupport -> no dependency/node 'HasPinPicker'-->
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X2S/Location_1L_2R" />
+              </NozzleChanger>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/X2S/Location_1R_2L" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Delete"></AspLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </X2S>
+  <DX4 BaseConfiguration="BaseSX4DX4">
+    <Configuration>
+      <Name>DX4</Name>
+      <MachineFrame>
+        <Type>DX4</Type>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteDX4</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/DX4" />
+        </MachineIo>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/DX4" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>DX4</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <StationarySensors OverrideAction="Delete" />
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>DX4</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/OnlyCP20" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <StationarySensors OverrideAction="Delete" />
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </DX4>
+  <DX4Dual BaseConfiguration="DX4">
+    <Configuration>
+      <Name>DX4</Name>
+      <MachineFrame>
+        <Type>DX4Dual</Type>
+        <Conveyor>
+          <PossibleTypes OverrideAction="Replace">
+            <ConveyorType>
+              <Name>DualLaneSX4</Name>
+              <DisplayName>Dual lane conveyor</DisplayName>
+              <LaneCount>2</LaneCount>
+            </ConveyorType>
+          </PossibleTypes>
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>SX4_HighSpeed</Type>
+          </ProcessingArea>
+          <ProcessingArea Id="2">
+            <Type>SX4_HighSpeed</Type>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </DX4Dual>
+  <TwoDotTwo BaseConfiguration="BaseAll">
+    <Configuration>
+      <Name>TwoDotTwo</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[TwoDotTwo]" />
+      <MachineFrame>
+        <Type>TwoDotTwo</Type>
+        <MachineIo>
+          <Type>IoGreenYellowRedTwoDotTwo</Type>
+        </MachineIo>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/TwoDotTwo" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>TwoDotTwo</Type>
+            <Gantries>
+              <Gantry Id="L" OverrideAction="Delete" />
+              <Gantry Id="R">
+                <Type>TwoDotTwo_DualHead</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/TwoDotTwoLocation1" />
+                    <HasTemperatureCompensation OverrideAction="Insert">false</HasTemperatureCompensation>
+                    <VisionSensor>
+                      <Name>Gantry_1_R.PlaceHead.camera</Name>
+                      <Type Individual="true" />
+                      <Iss>Gantry_1_R.CP20Plus.camera</Iss>
+                      <PossibleTypes LinkNode="HeadSensorTypes" />
+                      <NullTypeIsOk>true</NullTypeIsOk>
+                    </VisionSensor>
+                  </PlaceHead>
+                  <PlaceHead Id="2" OverrideAction="Insert">
+                    <Name>Gantry_1_R.PickAndPlaceHead</Name>
+                    <Type Individual="true" />
+                    <IssPrefix>Gantry_1_R.</IssPrefix>
+                    <PossibleTypes LinkNode="PlaceHeadTypes/TwoDotTwoLocation2" />
+                    <HasTemperatureCompensation>false</HasTemperatureCompensation>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <Name>NozzleChanger_1_L</Name>
+                <Type />
+                <PossibleTypes LinkNode="NozzleChangerTypes/TwoDotTwo" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <Name>NozzleChanger_1_R</Name>
+                <Type />
+                <PossibleTypes LinkNode="NozzleChangerTypes/TwoDotTwo" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <!--Note different DevicePosition 2 instead of 4-->
+                <DevicePosition>2</DevicePosition>
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/TwoDotTwo_L" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <TapeCutter>
+                  <Name>DeviceLocation_1_R.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/TwoDotTwo_R" />
+              </DeviceLocation>
+            </DeviceLocations>
+          </ProcessingArea>
+          <ProcessingArea Id="2" OverrideAction="Delete" />
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </TwoDotTwo>
+  <BaseSX12DX12 BaseConfiguration="BaseAll">
+    <Configuration>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[SX]" />
+      <MachineFrame>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/SX12" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type IsAbstract="true" />
+            <Gantries>
+              <Gantry Id="L">
+                <Type IsAbstract="true" />
+                <MeasureHead>
+                  <VisionSensor>
+                    <NullTypeIsOk OverrideAction="Insert">true</NullTypeIsOk>
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <HasTemperatureCompensation OverrideAction="Insert">false</HasTemperatureCompensation>
+                    <NullTypeIsOk OverrideAction="Insert">true</NullTypeIsOk>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Type IsAbstract="true" />
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <HasTemperatureCompensation OverrideAction="Insert">false</HasTemperatureCompensation>
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <Name>NozzleChanger_1_L</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <Name>NozzleChanger_1_R</Name>
+                <Type />
+                <PossibleTypes IsAbstract="true" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <!--Note different DevicePosition 2 instead of 4-->
+                <DevicePosition>2</DevicePosition>
+                <TapeCutter>
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" IsAbstract="true" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <TapeCutter>
+                  <Name>DeviceLocation_1_R.TapeCutter</Name>
+                  <Type Individual="true" />
+                  <PossibleTypes LinkNode="TapeCutterTypes/SX" />
+                </TapeCutter>
+                <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+                <PossibleSelectionTypes OverrideAction="Insert" IsAbstract="true" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <COPLAN OverrideAction="Insert" Id="R">
+                <Name>StationaryCamera_1_R.camera.Coplan</Name>
+                <Type Individual="true" />
+                <PossibleCoplanTypes LinkNode="CoplanTypes" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </COPLAN>
+            </StationarySensors>
+          </ProcessingArea>
+          <ProcessingArea Id="2" OverrideAction="Delete" />
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </BaseSX12DX12>
+  <SX12 BaseConfiguration="BaseSX12DX12">
+    <Configuration>
+      <Name>SX</Name>
+      <MachineFrame>
+        <Type>SX12</Type>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteSX</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/SX" />
+        </MachineIo>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>SX12</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type Individual="true">SX</Type>
+                <GantryDetection OverrideAction="Insert">
+                  <DisplayName>SX2</DisplayName>
+                  <ComponentType>SX</ComponentType>
+                  <Name>SX</Name>
+                  <Iss>Gantry_1_L.yAxis</Iss>
+                </GantryDetection>
+                <NullTypeIsOk OverrideAction="Insert">true</NullTypeIsOk>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX12" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX12" />
+                  </PlaceHead>
+                </PlaceHeads>
+                <AspHead OverrideAction="Insert">
+                  <Name>Gantry_1_R.AspHead</Name>
+                  <Type Individual="true" />
+                  <NullTypeIsOk>true</NullTypeIsOk>
+                  <Iss>Gantry_1_R.AspHead.PinPicker</Iss>
+                  <PossibleTypes LinkNode="AspHeadTypes" />
+                </AspHead>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossibleSelectionTypes LinkNode="DeviceLocationTypes/SX12" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossibleSelectionTypes LinkNode="DeviceLocationTypes/SX12" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/SX" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <AspLocations OverrideAction="Insert">
+              <AspLocation Id="L">
+                <Name>DeviceLocation_1_L.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/SX" />
+                <AspMagazines LinkNode="AspMagazines/SX" />
+              </AspLocation>
+              <AspLocation Id="R">
+                <Name>DeviceLocation_1_R.AspLocation</Name>
+                <Type />
+                <PossibleTypes LinkNode="AspLocationTypes/SX" />
+                <AspMagazines LinkNode="AspMagazines/SX" />
+              </AspLocation>
+            </AspLocations>
+          </ProcessingArea>
+        </ProcessingAreas>
+        <GantryCountTypes OverrideAction="Insert">
+          <PossibleTypes ChildIdTag="GantryCount">
+            <PossibleType>
+              <GantryCount>1</GantryCount>
+              <Name>SX1</Name>
+            </PossibleType>
+            <PossibleType>
+              <GantryCount>2</GantryCount>
+              <Name>SX2</Name>
+            </PossibleType>
+          </PossibleTypes>
+        </GantryCountTypes>
+      </MachineFrame>
+    </Configuration>
+  </SX12>
+  <SX12V2 BaseConfiguration="SX12">
+    <Configuration>
+      <Name>SX</Name>
+      <MachineFrame>
+        <Type>SX12V2</Type>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/SX12V2" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>SX12V2</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX12V2" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>SX</Type>
+                <MeasureHead>
+                  <VisionSensor>
+                    <PossibleTypes LinkNode="PcbSensorTypesHFM" />
+                  </VisionSensor>
+                </MeasureHead>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/SX12V2" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+          </ProcessingArea>
+        </ProcessingAreas>
+        <GantryCountTypes>
+          <PossibleTypes ChildIdTag="GantryCount">
+            <PossibleType>
+              <GantryCount>1</GantryCount>
+              <Name>SX1V2</Name>
+            </PossibleType>
+            <PossibleType>
+              <GantryCount>2</GantryCount>
+              <Name>SX2V2</Name>
+            </PossibleType>
+          </PossibleTypes>
+        </GantryCountTypes>
+      </MachineFrame>
+    </Configuration>
+  </SX12V2>
+  <BaseDX12 BaseConfiguration="BaseSX12DX12">
+    <Configuration>
+      <MachineFrame>
+        <MachineIo>
+          <Type Individual="true">IoGreenWhiteDX</Type>
+          <UserMustSelectType OverrideAction="Insert">true</UserMustSelectType>
+          <PossibleTypes OverrideAction="Insert" LinkNode="MachineIoTypes/DX" />
+        </MachineIo>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>DX12</Type>
+            <Gantries>
+              <Gantry Id="L">
+                <Type>DX</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoCPP" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+              <Gantry Id="R">
+                <Type>DX</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <PossibleTypes LinkNode="PlaceHeadTypes/NoCPP" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <DeviceLocations>
+              <DeviceLocation Id="L">
+                <PossibleSelectionTypes LinkNode="DeviceLocationTypes/DX12" />
+              </DeviceLocation>
+              <DeviceLocation Id="R">
+                <PossibleSelectionTypes LinkNode="DeviceLocationTypes/DX12" />
+              </DeviceLocation>
+            </DeviceLocations>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </BaseDX12>
+  <DX1 BaseConfiguration="BaseDX12">
+    <Configuration>
+      <Name>DX1</Name>
+      <MachineFrame>
+        <Type>DX1</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Gantries>
+              <Gantry Id="L" OverrideAction="Delete" />
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX1" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX1" />
+              </NozzleChanger>
+            </NozzleChangers>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </DX1>
+  <DX2 BaseConfiguration="BaseDX12">
+    <Configuration>
+      <Name>DX2</Name>
+      <MachineFrame>
+        <Type>DX2</Type>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <NozzleChangers>
+              <NozzleChanger Id="L">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX2" />
+              </NozzleChanger>
+              <NozzleChanger Id="R">
+                <PossibleTypes LinkNode="NozzleChangerTypes/DX2" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <PossibleTypes OverrideAction="Insert">
+              <ProcessingAreaType>
+                <Name>DX2_2DLM</Name>
+                <PlaceHead_R>DLM|SkippedDLM</PlaceHead_R>
+                <PlaceHead_L>DLM|SkippedDLM</PlaceHead_L>
+              </ProcessingAreaType>
+              <ProcessingAreaType>
+                <Name>DX12</Name>
+              </ProcessingAreaType>
+            </PossibleTypes>
+          </ProcessingArea>
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </DX2>
+  <HTB1 BaseConfiguration="BaseAll">
+    <Configuration>
+      <Name>HTB1</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[HTB]" />
+      <MachineFrame>
+        <Type>HTB1</Type>
+        <MachineIo>
+          <Type>IoGreenWhiteSX</Type>
+        </MachineIo>
+        <Conveyor>
+          <PossibleTypes LinkNode="ConveyorTypes/HTB" />
+        </Conveyor>
+        <ProcessingAreas>
+          <ProcessingArea Id="1">
+            <Type>HTB</Type>
+            <Gantries>
+              <Gantry Id="L" OverrideAction="Delete" />
+              <Gantry Id="R">
+                <Type>HTB1</Type>
+                <PlaceHeads>
+                  <PlaceHead Id="1">
+                    <HasTemperatureCompensation OverrideAction="Insert">false</HasTemperatureCompensation>
+                    <PossibleTypes LinkNode="PlaceHeadTypes/All" />
+                  </PlaceHead>
+                </PlaceHeads>
+              </Gantry>
+            </Gantries>
+            <NozzleChangers>
+              <NozzleChanger Id="L" OverrideAction="Delete" />
+              <NozzleChanger Id="R">
+                <Name>NozzleChanger_1_R</Name>
+                <Type />
+                <PossibleTypes LinkNode="NozzleChangerTypes/HTB" />
+              </NozzleChanger>
+            </NozzleChangers>
+            <DeviceLocations>
+              <DeviceLocation Id="L" OverrideAction="Delete" />
+              <DeviceLocation Id="R">
+                <PossiblePingTypes OverrideAction="Insert" LinkNode="DeviceLocationTypes/HTB" />
+                <TapeCutter>
+                  <Type />
+                  <PossibleTypes />
+                </TapeCutter>
+              </DeviceLocation>
+            </DeviceLocations>
+            <StationarySensors>
+              <FC Id="L" OverrideAction="Delete" />
+              <FC Id="R" OverrideAction="Delete" />
+              <IC Id="L" OverrideAction="Delete" />
+              <IC Id="R">
+                <Name>StationaryCamera_1_R.camera.IC</Name>
+                <Type Individual="true" />
+                <Iss>StationarySensor_1_R.camera.IC</Iss>
+                <PossibleTypes LinkNode="StationarySensorTypes/IC" />
+                <NullTypeIsOk>true</NullTypeIsOk>
+              </IC>
+            </StationarySensors>
+          </ProcessingArea>
+          <ProcessingArea Id="2" OverrideAction="Delete" />
+        </ProcessingAreas>
+      </MachineFrame>
+    </Configuration>
+  </HTB1>
+  <HCS BaseConfiguration="HTB1">
+    <Configuration>
+      <Name>HCS</Name>
+      <CanConfiguration LinkFile="Subsystems/IssConfiguration.xml" LinkNode="CanConfigurations/CanConfiguration[HCS]" />
+      <MachineFrame>
+        <Type>HCS</Type>
+      </MachineFrame>
+    </Configuration>
+  </HCS>
+  <!--Subsystem configuration-->
+  <ConveyorTypes>
+    <X>
+      <ConveyorType>
+        <Name>SingleConveyorX</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualConveyorX</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>QuadLaneConveyor</Name>
+        <DisplayName>Quad lane conveyor</DisplayName>
+        <LaneCount>4</LaneCount>
+      </ConveyorType>
+    </X>
+    <CA>
+      <ConveyorType>
+        <Name>SingleConveyorCA</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualConveyorCA</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </CA>
+    <CAeWLP>
+      <ConveyorType>
+        <Name>SingleConveyorCA_eWLP</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+    </CAeWLP>
+    <X4t>
+      <ConveyorType>
+        <Name>DualConveyorX4t</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </X4t>
+    <SX4>
+      <ConveyorType>
+        <Name>DualLaneSX4</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>QuadLaneSX4</Name>
+        <DisplayName>Quad lane conveyor</DisplayName>
+        <LaneCount>4</LaneCount>
+      </ConveyorType>
+    </SX4>
+    <X4iS>
+      <ConveyorType>
+        <Name>SingleLaneX4iS</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualLaneX4iS</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </X4iS>
+    <X234S>
+      <ConveyorType>
+        <Name>SingleLaneSX4Vario</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualLaneSX4Vario</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </X234S>
+    <DX4>
+      <ConveyorType>
+        <Name>SingleConveyorDX4</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+    </DX4>
+    <SX12>
+      <ConveyorType>
+        <Name>SingleLaneSX</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualLaneSX</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </SX12>
+    <SX12V2>
+      <ConveyorType>
+        <Name>SingleLaneSX12V2</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualLaneSX12V2</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </SX12V2>
+    <X4i>
+      <ConveyorType>
+        <Name>SingleConveyorX4i</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>DualConveyorX4i</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+      <ConveyorType>
+        <Name>QuadLaneConveyor</Name>
+        <DisplayName>Quad lane conveyor</DisplayName>
+        <LaneCount>4</LaneCount>
+      </ConveyorType>
+    </X4i>
+    <X4it>
+      <ConveyorType>
+        <Name>DualConveyorX4it</Name>
+        <DisplayName>Dual lane conveyor</DisplayName>
+        <LaneCount>2</LaneCount>
+      </ConveyorType>
+    </X4it>
+    <TwoDotTwo>
+      <ConveyorType>
+        <Name>SingleLaneTwoDotTwo</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+    </TwoDotTwo>
+    <HTB>
+      <ConveyorType>
+        <Name>SingleLaneHTB</Name>
+        <DisplayName>Single lane conveyor</DisplayName>
+        <LaneCount>1</LaneCount>
+      </ConveyorType>
+    </HTB>
+  </ConveyorTypes>
+  <ChuckTypes>
+    <ChuckType>
+      <Name>ChuckEmpty</Name>
+      <DisplayName>-</DisplayName>
+    </ChuckType>
+    <ChuckType>
+      <Name>ChuckSingleLaneCA_8</Name>
+      <DisplayName>8 inch chuck</DisplayName>
+    </ChuckType>
+    <ChuckType>
+      <Name>ChuckSingleLaneCA_12</Name>
+      <DisplayName>12 inch chuck</DisplayName>
+    </ChuckType>
+    <ChuckType>
+      <Name>ChuckSingleLaneCA_13</Name>
+      <DisplayName>13 inch chuck</DisplayName>
+    </ChuckType>
+  </ChuckTypes>
+  <PcbSensorTypes>
+    <SensorType>
+      <Name>SST29_PCB</Name>
+      <SensorSystemType>29</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST24</Name>
+      <SensorSystemType>24</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST34</Name>
+      <SensorSystemType>34</SensorSystemType>
+    </SensorType>
+    <!--If not present, ISS returns 5 or 12 -> empty type-->
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>5</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>12</SensorSystemType>
+    </SensorType>
+  </PcbSensorTypes>
+  <PcbSensorTypesHFM>
+    <SensorType>
+      <Name>SST29_PCB</Name>
+      <SensorSystemType>29</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST24</Name>
+      <SensorSystemType>24</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST34</Name>
+      <SensorSystemType>34</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST34_HFM</Name>
+      <DisplayName>SST34H</DisplayName>
+      <SensorSystemType>34</SensorSystemType>
+      <SubType>1</SubType>
+    </SensorType>
+    <SensorType>
+      <Name>SST34_HU</Name>
+      <DisplayName>SST34HU</DisplayName>
+      <SensorSystemType>34</SensorSystemType>
+      <SubType>2</SubType>
+    </SensorType>
+    <!--If not present, ISS returns 5 or 12 -> empty type-->
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>5</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>12</SensorSystemType>
+    </SensorType>
+  </PcbSensorTypesHFM>
+  <HeadSensorTypes>
+    <SensorType>
+      <Name>SST23</Name>
+      <SensorSystemType>23</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST28</Name>
+      <SensorSystemType>28</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST29</Name>
+      <SensorSystemType>29</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST30</Name>
+      <SensorSystemType>30</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST38</Name>
+      <SensorSystemType>38</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>SST41</Name>
+      <SensorSystemType>41</SensorSystemType>
+    </SensorType>
+    <!--If not present, ISS returns 5 or 12 -> empty type-->
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>5</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>12</SensorSystemType>
+    </SensorType>
+  </HeadSensorTypes>
+  <HeadSensorType41>
+    <SensorType>
+      <Name>SST41</Name>
+      <SensorSystemType>41</SensorSystemType>
+    </SensorType>
+    <!--If not present, ISS returns 5 or 12 -> empty type-->
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>5</SensorSystemType>
+    </SensorType>
+    <SensorType>
+      <Name>dummy</Name>
+      <SensorSystemType>12</SensorSystemType>
+    </SensorType>
+  </HeadSensorType41>
+  <StationarySensorTypes>
+    <IC>
+      <SensorType>
+        <Name>SST33</Name>
+        <SensorSystemType>33</SensorSystemType>
+      </SensorType>
+      <SensorType>
+        <Name>SST36</Name>
+        <SensorSystemType>36</SensorSystemType>
+      </SensorType>
+      <!--If not present, ISS returns 5 or 12 -> empty type-->
+      <SensorType>
+        <Name>dummy</Name>
+        <SensorSystemType>5</SensorSystemType>
+      </SensorType>
+      <SensorType>
+        <Name>dummy</Name>
+        <SensorSystemType>12</SensorSystemType>
+      </SensorType>
+    </IC>
+    <FC>
+      <SensorType>
+        <Name>SST25</Name>
+        <SensorSystemType>25</SensorSystemType>
+      </SensorType>
+      <SensorType>
+        <Name>SST47</Name>
+        <SensorSystemType>47</SensorSystemType>
+      </SensorType>
+      <!--If not present, ISS returns 5 or 12 -> empty type-->
+      <SensorType>
+        <Name>dummy</Name>
+        <SensorSystemType>5</SensorSystemType>
+      </SensorType>
+      <SensorType>
+        <Name>dummy</Name>
+        <SensorSystemType>12</SensorSystemType>
+      </SensorType>
+    </FC>
+  </StationarySensorTypes>
+  <CoplanTypes>
+    <SensorType>
+      <Name>SST37</Name>
+    </SensorType>
+  </CoplanTypes>
+  <PlaceHeadTypes>
+    <NoDLM>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </NoDLM>
+    <SX12>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </SX12>
+    <SX12V2>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF_Seg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF_Seg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HFM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/DLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedDLM" />
+    </SX12V2>
+    <SX34>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </SX34>
+    <XS>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20Plus" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </XS>
+    <X4SMicron>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20H" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HFM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </X4SMicron>
+    <CA>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20H" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </CA>
+    <NoCPP>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/DLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedDLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM">
+        <!--special Display name needed to distinguish between SkippedDML and SkippedNonDLM-->
+        <DisplayName SIRIO_TR="">none (gantry configured for CP20 or Twin)</DisplayName>
+      </PlaceHeadType>
+    </NoCPP>
+    <OnlyCP20>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </OnlyCP20>
+    <OnlyCP20H>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20H" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </OnlyCP20H>
+    <TwoDotTwoLocation1>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/DLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedDLM" />
+    </TwoDotTwoLocation1>
+    <TwoDotTwoLocation2>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/PP" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+    </TwoDotTwoLocation2>
+    <All>
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/VHS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20H" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/CP20Plus" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HS" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/Twin" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinSeg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF_Seg1" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/TwinVHF_Seg2" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/HFM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/DLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedNonDLM" />
+      <PlaceHeadType LinkNode="PlaceHeadTypes/Types/SkippedDLM" />
+    </All>
+    <Types>
+      <VHS>
+        <Name>VHS</Name>
+        <DisplayName>C&amp;P20</DisplayName>
+        <IssSuffix>VHS.gripper</IssSuffix>
+        <FilePrefixes>VH</FilePrefixes>
+      </VHS>
+      <CP20H>
+        <Name>CP20H</Name>
+        <DisplayName>C&amp;P20 M</DisplayName>
+        <IssSuffix>VHS.gripper</IssSuffix>
+        <FilePrefixes>VH</FilePrefixes>
+      </CP20H>
+      <CP20Plus>
+        <Name>CP20Plus</Name>
+        <DisplayName>C&amp;P20 P</DisplayName>
+        <IssSuffix>VHS.gripper</IssSuffix>
+        <FilePrefixes>VH</FilePrefixes>
+      </CP20Plus>
+      <HS>
+        <Name>HS</Name>
+        <DisplayName>CPP</DisplayName>
+        <IssSuffix>HS.gripper</IssSuffix>
+        <FilePrefixes>C</FilePrefixes>
+      </HS>
+      <DLM>
+        <Name>DLM</Name>
+        <DisplayName>C&amp;P12</DisplayName>
+        <IssSuffix>DLM.gripper</IssSuffix>
+        <FilePrefixes>D</FilePrefixes>
+      </DLM>
+      <Twin>
+        <Name>Twin</Name>
+        <IssSuffix>Twin.Seg_1.gripper</IssSuffix>
+        <IssSuffix2>Twin.Seg_2.gripper</IssSuffix2>
+        <FilePrefixes>TI</FilePrefixes>
+      </Twin>
+      <TwinSeg1>
+        <Name>TwinSeg1</Name>
+        <DisplayName SIRIO_TR="">Twin (Segment 1 only)</DisplayName>
+        <IssSuffix>Twin.Seg_1.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+      </TwinSeg1>
+      <TwinSeg2>
+        <Name>TwinSeg2</Name>
+        <DisplayName SIRIO_TR="">Twin (Segment 2 only)</DisplayName>
+        <IssSuffix>Twin.Seg_2.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+      </TwinSeg2>
+      <TwinVHF>
+        <Name>TwinVHF</Name>
+        <DisplayName>Twin VHF</DisplayName>
+        <!--uses Twin proxy, too, because identical CAN ids are not allowed-->
+        <IssSuffix>Twin.Seg_1.gripper</IssSuffix>
+        <IssSuffix2>Twin.Seg_2.gripper</IssSuffix2>
+        <FilePrefixes>TI</FilePrefixes>
+        <RequiredCamera>SST34_HU</RequiredCamera>
+      </TwinVHF>
+      <TwinVHF_Seg1>
+        <Name>TwinVHF_Seg1</Name>
+        <DisplayName SIRIO_TR="">Twin VHF (Segment 1 only)</DisplayName>
+        <!--uses Twin proxy, too, because identical CAN ids are not allowed-->
+        <IssSuffix>Twin.Seg_1.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+        <RequiredCamera>SST34_HU</RequiredCamera>
+      </TwinVHF_Seg1>
+      <TwinVHF_Seg2>
+        <Name>TwinVHF_Seg2</Name>
+        <DisplayName SIRIO_TR="">Twin VHF (Segment 2 only)</DisplayName>
+        <!--uses Twin proxy, too, because identical CAN ids are not allowed-->
+        <IssSuffix>Twin.Seg_2.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+        <RequiredCamera>SST34_HU</RequiredCamera>
+      </TwinVHF_Seg2>
+      <HFM>
+        <Name>HFM</Name>
+        <DisplayName>VHF P&amp;P</DisplayName>
+        <!--uses Twin proxy, too, because identical CAN ids are not allowed-->
+        <IssSuffix>Twin.Seg_2.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+        <RequiredCamera>SST34_HFM</RequiredCamera>
+      </HFM>
+      <SkippedNonDLM>
+        <Name />
+        <DisplayName />
+        <ComponentType>SkippedNonDLM</ComponentType>
+        <CompatibleType />
+      </SkippedNonDLM>
+      <SkippedDLM>
+        <Name>SkippedDLM</Name>
+        <DisplayName SIRIO_TR="">none (gantry configured for C&amp;P12)</DisplayName>
+        <CompatibleType>DLM</CompatibleType>
+      </SkippedDLM>
+      <PP>
+        <Name>PP</Name>
+        <DisplayName>P&amp;P</DisplayName>
+        <IssSuffix>PP.Seg_1.gripper</IssSuffix>
+        <FilePrefixes>TI</FilePrefixes>
+      </PP>
+    </Types>
+  </PlaceHeadTypes>
+  <NozzleChangerTypes>
+    <CA>
+      <Gantries1and3>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CA_CP20_1_2_1R_2L</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>WF-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CA_CPP_1_2_1R_2L</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>WF-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Gantries1and3>
+      <Gantries2and4>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CA_CP20_1_2_1L_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>WF-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CA_CPP_1_2_1L_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>WF-Location</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Gantries2and4>
+    </CA>
+    <X>
+      <X4Gantries1and3>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X4Gantries1and3>
+      <X4Gantries2and4>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <Name>TH_PP_SingleCarrier10MagazinesWithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <PlaceHead>VHS</PlaceHead>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <PlaceHead>HS</PlaceHead>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X4Gantries2and4>
+      <X4tGantries2and4>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <Name>TH_PP_SingleCarrier10MagazinesWithMTC_X4t</Name>
+          <DisplayName>Twin</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <PlaceHead>VHS</PlaceHead>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <PlaceHead>HS</PlaceHead>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X4tGantries2and4>
+      <X3Gantry1>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X3Gantry1>
+      <X3Gantry2>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X3Gantry2>
+      <X3Gantry3>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X3Gantry3>
+      <X3Gantry4>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <Name>TH_PP_SingleCarrier10MagazinesWithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_DoubleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X3Gantry4>
+      <X2Gantries1and3>
+        <NozzleChangerType>
+          <Name>CP20_DoubleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_DoubleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X2Gantries1and3>
+      <X2Gantries2and4>
+        <NozzleChangerType>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+          <Name />
+          <DisplayName />
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrier</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrier</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </X2Gantries2and4>
+      <X4iGantries2and4>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+      </X4iGantries2and4>
+      <X4iGantries1and3>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrierNewCenterReject</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrierNewCenterReject</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+      </X4iGantries1and3>
+    </X>
+    <X4iS>
+      <Location_1R_2L>
+        <!--TrayStack prevents nozzle changer-->
+        <NozzleChangerType>
+          <Name />
+          <DisplayName />
+          <DeviceLocation>X4iSTrayStack</DeviceLocation>
+        </NozzleChangerType>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X4iS_CP20_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20_C13</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X4iS_CP20Plus_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20Plus_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20Plus_C13</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X4iS_CPP_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CPP_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CPP_C13</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X4iS_Twin_C1_XTableMTF_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_Twin_C13</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location_1R_2L>
+      <Location_1L_2R>
+        <!--TrayStack prevents nozzle changer-->
+        <NozzleChangerType>
+          <Name />
+          <!--name empty -> no nozzle changer defined-->
+          <DisplayName />
+          <DeviceLocation>X4iSTrayStack</DeviceLocation>
+        </NozzleChangerType>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X4iS_CP20_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20_C13</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X4iS_CP20Plus_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CP20Plus_C13</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X4iS_CPP_C1_XTableMTF_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_CPP_C13</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X4iS_Twin_C1_XTableMTF_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X4iS_Twin_C13</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location_1L_2R>
+    </X4iS>
+    <X234S>
+      <Location_1R_2L>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_WithPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_NoPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_WithPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_NoPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_WithPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_NoPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_XTableMTF_WithPinPicker_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_WithPinPicker_1R_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_NoPinPicker_1R_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+      </Location_1R_2L>
+      <Location_1L_2R>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_WithPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_NoPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_WithPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_NoPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name />
+          <!--name empty -> no nozzle changer defined-->
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name />
+          <!--name empty -> no nozzle changer defined-->
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_WithPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_NoPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_XTableMTF_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_1L_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location_1L_2R>
+    </X234S>
+    <X4S_2R>
+      <Location>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_WithPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_NoPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_WithPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_NoPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_WithMTC_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_WithMTC_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_WithPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>true</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_NoPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_XTableMTF_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_1L_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location>
+    </X4S_2R>
+    <X2S>
+      <!--X2S does not support SmartPinSupport -> no dependency/node 'HasPinPicker'-->
+      <Location_1R_2L>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_NoPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_NoPinPicker_2L</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_NoPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_NoPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_XTableMTF_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_NoPinPicker_1R_2L</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location_1R_2L>
+      <Location_1L_2R>
+        <!--CP20-->
+        <NozzleChangerType>
+          <Name>X234S_CP20_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20_C13_NoPinPicker</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <!--CP20Plus-->
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C1_XTableMTF_2R</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+          <HasPinPicker>false</HasPinPicker>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CP20Plus_C13_NoPinPicker</Name>
+          <DisplayName>CP20Plus</DisplayName>
+          <PlaceHead>CP20Plus</PlaceHead>
+        </NozzleChangerType>
+        <!--CPP-->
+        <NozzleChangerType>
+          <Name>X234S_CPP_C1_XTableMTF_2R</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name />
+          <!--name empty -> no nozzle changer defined-->
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name />
+          <!--name empty -> no nozzle changer defined-->
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_CPP_C13_NoPinPicker</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <!--Twin-->
+        <NozzleChangerType>
+          <!--XTable with MTF support, PA2, Right-->
+          <Name>X234S_Twin_C1_XTableMTF_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>X-Location_MTF</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>AutoTrayDevice</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C1_WithMTC</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+          <DeviceLocation>WpcWithXTable</DeviceLocation>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>X234S_Twin_C13_1L_2R</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Location_1L_2R>
+    </X2S>
+    <SX4>
+      <Gantry2>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>SX4_Twin_1</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Gantry2>
+      <Gantry4>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrierDisabledMagsNewCenterReject</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier10Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Gantry4>
+      <Gantries1and3>
+        <NozzleChangerType>
+          <Name>CP20_SingleCarrierNewCenterReject</Name>
+          <DisplayName>CP20</DisplayName>
+          <PlaceHead>VHS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>CPP_SingleCarrierNewCenterReject</Name>
+          <DisplayName>CPP</DisplayName>
+          <PlaceHead>HS</PlaceHead>
+        </NozzleChangerType>
+        <NozzleChangerType>
+          <Name>TH_PP_SingleCarrier12Magazines</Name>
+          <DisplayName>Twin</DisplayName>
+          <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        </NozzleChangerType>
+      </Gantries1and3>
+    </SX4>
+    <SX>
+      <!--CP20-->
+      <NozzleChangerType>
+        <Name>SX_CP20_1_2</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CP20_1_2_3_4</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CP20_1_2_3_4</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+      </NozzleChangerType>
+      <!--CP20Plus-->
+      <NozzleChangerType>
+        <Name>SX_CP20Plus_1_2</Name>
+        <DisplayName>CP20+</DisplayName>
+        <PlaceHead>CP20Plus</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CP20Plus_1_2_3_4</Name>
+        <DisplayName>CP20+</DisplayName>
+        <PlaceHead>CP20Plus</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CP20Plus_1_2_3_4</Name>
+        <DisplayName>CP20+</DisplayName>
+        <PlaceHead>CP20Plus</PlaceHead>
+      </NozzleChangerType>
+      <!--DLM-->
+      <NozzleChangerType>
+        <Name>DX_DLM_0</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <OppositePlaceHead>VHS</OppositePlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2_4</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2_4</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2_3_4</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2_3_4</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2_3_4</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+      </NozzleChangerType>
+      <!--CPP-->
+      <NozzleChangerType>
+        <Name>SX_CPP_2</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_2</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_1_2</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_2_4</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_2_4</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_1_2</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_1_2_3_4</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_1_2_3_4</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_CPP_1_2_3_4</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+      </NozzleChangerType>
+      <!--Twin-->
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+      </NozzleChangerType>
+      <!--TwinVHF-->
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+      </NozzleChangerType>
+      <!--HFM-->
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_2_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+        <DeviceLocation>Outer60SXwithFoldAwayTapeDuct</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>SX_Twin_1_2_3_4</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+      </NozzleChangerType>
+    </SX>
+    <DX1>
+      <!--CP20-->
+      <NozzleChangerType>
+        <Name>DX_CP20_1_2</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_CP20_1_2_3_4</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+      </NozzleChangerType>
+      <!--DLM-->
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+      </NozzleChangerType>
+      <!--Twin-->
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+    </DX1>
+    <DX2>
+      <!--CP20-->
+      <NozzleChangerType>
+        <Name>DX_CP20_1_2</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_CP20_1_2_3_4</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+      </NozzleChangerType>
+      <!--DLM-->
+      <NozzleChangerType>
+        <Name>DX_DLM_0</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <OppositePlaceHead>VHS</OppositePlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_DLM_1_2</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+      </NozzleChangerType>
+      <!--Twin-->
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <OppositePlaceHead>DLM</OppositePlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <OppositePlaceHead>DLM</OppositePlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_0</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <OppositePlaceHead>DLM</OppositePlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <OppositePlaceHead>DLM</OppositePlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer30SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_2_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer2TableSX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>DX_Twin_1_2_3_4</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+        <DeviceLocation>Outer60SX</DeviceLocation>
+        <HasStationaryCamera>false</HasStationaryCamera>
+      </NozzleChangerType>
+    </DX2>
+    <TwoDotTwo BaseConfiguration="NozzleChangerTypes/DX1" />
+    <HTB>
+      <!--CP20-->
+      <NozzleChangerType>
+        <Name>HTB_CP20_1</Name>
+        <DisplayName>CP20</DisplayName>
+        <PlaceHead>VHS</PlaceHead>
+      </NozzleChangerType>
+      <!--CP20Plus-->
+      <NozzleChangerType>
+        <Name>HTB_CP20Plus_1</Name>
+        <DisplayName>CP20Plus</DisplayName>
+        <PlaceHead>CP20Plus</PlaceHead>
+      </NozzleChangerType>
+      <!--CPP-->
+      <NozzleChangerType>
+        <Name>HTB_CPP_1</Name>
+        <DisplayName>CPP</DisplayName>
+        <PlaceHead>HS</PlaceHead>
+      </NozzleChangerType>
+      <!--Twin-->
+      <NozzleChangerType>
+        <Name>HTB_Twin_1</Name>
+        <DisplayName>Twin</DisplayName>
+        <PlaceHead>Twin|TwinSeg1|TwinSeg2</PlaceHead>
+      </NozzleChangerType>
+      <!--HFM-->
+      <NozzleChangerType>
+        <Name>HTB_Twin_1</Name>
+        <DisplayName>VHF</DisplayName>
+        <PlaceHead>HFM</PlaceHead>
+      </NozzleChangerType>
+      <!--DLM-->
+      <NozzleChangerType>
+        <Name>HTB_DLM_1</Name>
+        <DisplayName>DLM12</DisplayName>
+        <PlaceHead>DLM</PlaceHead>
+      </NozzleChangerType>
+      <NozzleChangerType>
+        <Name>HTB_Twin_1</Name>
+        <DisplayName>TwinVHF</DisplayName>
+        <PlaceHead>TwinVHF|TwinVHF_Seg1|TwinVHF_Seg2</PlaceHead>
+        <HasStationaryCamera>true</HasStationaryCamera>
+      </NozzleChangerType>
+    </HTB>
+  </NozzleChangerTypes>
+  <DeviceLocationTypes>
+    <X>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+      <DefaultDeviceLocation>
+        <Name>AutoTrayDevice</Name>
+        <DisplayName>MTC</DisplayName>
+        <ComponentType>XMtcSlot</ComponentType>
+        <IssSuffix>.MtcDevice</IssSuffix>
+        <PingDeviceType>23</PingDeviceType>
+        <LocationFrame>X</LocationFrame>
+        <PersistedButNotPresentIsAllowed>true</PersistedButNotPresentIsAllowed>
+      </DefaultDeviceLocation>
+      <EmptyLocation>
+        <Name />
+        <LocationFrame>X</LocationFrame>
+      </EmptyLocation>
+    </X>
+    <XOptimizedForAutoTray>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X-optimizedForMTC</LocationFrame>
+      </DeviceLocation>
+      <DefaultDeviceLocation>
+        <Name>AutoTrayDevice</Name>
+        <DisplayName>MTC</DisplayName>
+        <ComponentType>XMtcSlot</ComponentType>
+        <IssSuffix>.MtcDevice</IssSuffix>
+        <PingDeviceType>23</PingDeviceType>
+        <LocationFrame>X-optimizedForMTC</LocationFrame>
+        <PersistedButNotPresentIsAllowed>true</PersistedButNotPresentIsAllowed>
+      </DefaultDeviceLocation>
+      <EmptyLocation>
+        <Name />
+        <LocationFrame>X-optimizedForMTC</LocationFrame>
+      </EmptyLocation>
+    </XOptimizedForAutoTray>
+    <XNoAutoTray>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+      <EmptyLocation>
+        <Name />
+        <LocationFrame>X</LocationFrame>
+      </EmptyLocation>
+    </XNoAutoTray>
+    <CA_13>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+      <DefaultDeviceLocation>
+        <Name>WF-Location</Name>
+        <DisplayName>SWS location</DisplayName>
+        <ComponentType>WFSlot13</ComponentType>
+        <PingDeviceType>28</PingDeviceType>
+        <LocationFrame>CA4Sws_1R_2L</LocationFrame>
+        <PersistedButNotPresentIsAllowed>true</PersistedButNotPresentIsAllowed>
+      </DefaultDeviceLocation>
+      <EmptyLocation>
+        <Name />
+        <LocationFrame>X</LocationFrame>
+      </EmptyLocation>
+    </CA_13>
+    <CA_24>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+      <DefaultDeviceLocation>
+        <Name>WF-Location</Name>
+        <DisplayName>SWS location</DisplayName>
+        <ComponentType>WFSlot24</ComponentType>
+        <PingDeviceType>28</PingDeviceType>
+        <LocationFrame>CA4Sws_1L_2R</LocationFrame>
+        <PersistedButNotPresentIsAllowed>true</PersistedButNotPresentIsAllowed>
+      </DefaultDeviceLocation>
+      <EmptyLocation>
+        <Name />
+        <LocationFrame>X</LocationFrame>
+      </EmptyLocation>
+    </CA_24>
+    <SX12 ChildIdTag="Name">
+      <DeviceLocation>
+        <Name>Inner60SX</Name>
+        <DisplayName SIRIO_TR="">60 slots (inner position)</DisplayName>
+        <ComponentType>SXSingleSlot</ComponentType>
+        <LocationFrame>InnerSX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer60SX</Name>
+        <DisplayName SIRIO_TR="">60 slots (outer position)</DisplayName>
+        <ComponentType>SXSingleSlot</ComponentType>
+        <LocationFrame>OuterSX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer30SX</Name>
+        <DisplayName SIRIO_TR="">30 slots (outer position)</DisplayName>
+        <ComponentType>SXDualSlot</ComponentType>
+        <LocationFrame>OuterSX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer2TableSX</Name>
+        <DisplayName SIRIO_TR="">Two tables (outer position)</DisplayName>
+        <ComponentType>SXDualTableSlot</ComponentType>
+        <LocationFrame>OuterSX2Tables</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer60SXwithFoldAwayTapeDuct</Name>
+        <DisplayName SIRIO_TR="">60 slots (outer position, fold-away tape duct)</DisplayName>
+        <ComponentType>SXSingleSlot</ComponentType>
+        <LocationFrame>OuterSXwithFoldAwayTapeDuct</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name />
+        <LocationFrame>OuterSX</LocationFrame>
+      </DeviceLocation>
+    </SX12>
+    <DX12 ChildIdTag="Name" BaseConfiguration="DeviceLocationTypes/SX12">
+      <DeviceLocation>
+        <Name>Inner60SX</Name>
+        <LocationFrame>InnerDX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer60SX</Name>
+        <LocationFrame>OuterDX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>Outer30SX</Name>
+        <LocationFrame>OuterDX</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation OverrideAction="Delete">
+        <Name>Outer60SXwithFoldAwayTapeDuct</Name>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name />
+        <LocationFrame>OuterDX</LocationFrame>
+      </DeviceLocation>
+    </DX12>
+    <SX4NoAutoTray>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name />
+        <LocationFrame>X</LocationFrame>
+      </DeviceLocation>
+    </SX4NoAutoTray>
+    <X234S_1R>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_1R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name />
+        <LocationFrame>X234S_1R</LocationFrame>
+      </DeviceLocation>
+    </X234S_1R>
+    <X234S_1L>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName>X-Table location</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_1L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name />
+        <LocationFrame>X234S_1L</LocationFrame>
+      </DeviceLocation>
+    </X234S_1L>
+    <X234S_2R>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table, standard</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X-Location_MTF</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table, multi tray feeder support</DisplayName>
+        <ComponentType>XTableSlot<!--fuer die X4iS ist bereits ein XTableSlot_XS_MTF_2R angelegt mit Marke links 4mm weiter aussen--></ComponentType>
+        <LocationFrame>X234S_MTF_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>AutoTrayDevice</Name>
+        <DisplayName>MTC</DisplayName>
+        <ComponentType>XMtcSlot</ComponentType>
+        <IssSuffix>.MtcDevice</IssSuffix>
+        <PingDeviceType>23</PingDeviceType>
+        <LocationFrame>X234S_MTC_2R</LocationFrame>
+        <PersistedButNotPresentIsAllowed>true</PersistedButNotPresentIsAllowed>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>WpcWithXTable</Name>
+        <DisplayName SIRIO_TR="">Wpc with X-Table</DisplayName>
+        <ComponentType>XSDualSlot</ComponentType>
+        <LocationFrame>X234S_2R</LocationFrame>
+      </DeviceLocation>
+    </X234S_2R>
+    <X4S_2L>
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table, standard</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X-Location_MTF</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table, multi tray feeder support</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_MTF_2L</LocationFrame>
+      </DeviceLocation>
+    </X4S_2L>
+    <X23S_2L>
+      <!--When X2S or X3S: There is the special case for CPP and MTC at opposite side: X23S_CPP_WITH_MTC_2L-->
+      <DeviceLocation>
+        <Name>X-Location</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table, standard</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X234S_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X-Location_CPP_using_opposite_MTC</Name>
+        <IssSuffix>.XDevice</IssSuffix>
+        <DisplayName SIRIO_TR="">X-Table location (CPP using opposite MTC)</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X23S_CPP_WITH_MTC_2L</LocationFrame>
+        <CppUsesOppositeMtc>true</CppUsesOppositeMtc>
+      </DeviceLocation>
+    </X23S_2L>
+    <X4iS_1R>
+      <DeviceLocation>
+        <Name>X4iSPosition1</Name>
+        <DisplayName SIRIO_TR="">X-Table, inner position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition1_1R_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSPosition2</Name>
+        <DisplayName SIRIO_TR="">X-Table, outer position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition2_1R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSTrayStack</Name>
+        <DisplayName SIRIO_TR="">X-Table, tray stak</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSTrayStack_1R_2L</LocationFrame>
+      </DeviceLocation>
+    </X4iS_1R>
+    <X4iS_1L>
+      <DeviceLocation>
+        <Name>X4iSPosition1</Name>
+        <DisplayName SIRIO_TR="">X-Table, inner position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition1_1L_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSPosition2</Name>
+        <DisplayName SIRIO_TR="">X-Table, outer position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition2_1L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSTrayStack</Name>
+        <DisplayName SIRIO_TR="">X-Table, tray stak</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSTrayStack_1L_2R</LocationFrame>
+      </DeviceLocation>
+    </X4iS_1L>
+    <X4iS_2R>
+      <DeviceLocation>
+        <Name>X4iSPosition1</Name>
+        <DisplayName SIRIO_TR="">X-Table, inner position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition1_1L_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSPosition2</Name>
+        <DisplayName SIRIO_TR="">X-Table, outer position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition2_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X-Location_MTF</Name>
+        <DisplayName SIRIO_TR="">X-Table, multi tray feeder support</DisplayName>
+        <ComponentType>XTableSlot_XS_MTF_2R</ComponentType>
+        <LocationFrame>X4iS_MTF_2R</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSTrayStack</Name>
+        <DisplayName SIRIO_TR="">X-Table, tray stak</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSTrayStack_1L_2R</LocationFrame>
+      </DeviceLocation>
+    </X4iS_2R>
+    <X4iS_2L>
+      <DeviceLocation>
+        <Name>X4iSPosition1</Name>
+        <DisplayName SIRIO_TR="">X-Table, inner position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition1_1R_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSPosition2</Name>
+        <DisplayName SIRIO_TR="">X-Table, outer position</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSPosition2_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X-Location_MTF</Name>
+        <DisplayName SIRIO_TR="">X-Table, multi tray feeder support</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iS_MTF_2L</LocationFrame>
+      </DeviceLocation>
+      <DeviceLocation>
+        <Name>X4iSTrayStack</Name>
+        <DisplayName SIRIO_TR="">X-Table, tray stak</DisplayName>
+        <ComponentType>XTableSlot</ComponentType>
+        <LocationFrame>X4iSTrayStack_1R_2L</LocationFrame>
+      </DeviceLocation>
+    </X4iS_2L>
+    <TwoDotTwo_L ChildIdTag="Name">
+      <DeviceLocation>
+        <Name>2dot2-Location 2</Name>
+        <DisplayName SIRIO_TR="">60 slots</DisplayName>
+        <ComponentType>TwoDotTwoSlot</ComponentType>
+        <LocationFrame>TwoDotTwoStandard_L</LocationFrame>
+      </DeviceLocation>
+    </TwoDotTwo_L>
+    <TwoDotTwo_R ChildIdTag="Name">
+      <DeviceLocation>
+        <Name>2dot2-Location 1 Schokoseite</Name>
+        <DisplayName SIRIO_TR="">60 slots Schokoseite</DisplayName>
+        <ComponentType>TwoDotTwoSlot</ComponentType>
+        <LocationFrame>TwoDotTwoStandard_R</LocationFrame>
+      </DeviceLocation>
+    </TwoDotTwo_R>
+    <HTB>
+      <DeviceLocation>
+        <Name>HTB-Location</Name>
+        <DisplayName>HTB-Table location</DisplayName>
+        <ComponentType>HTBTableSlot</ComponentType>
+        <LocationFrame>HTB</LocationFrame>
+      </DeviceLocation>
+      <EmptyLocation>
+        <Name></Name>
+        <LocationFrame>HTB</LocationFrame>
+      </EmptyLocation>
+    </HTB>
+  </DeviceLocationTypes>
+  <TapeCutterTypes>
+    <X>
+      <TapeCutter>
+        <Name>XFCU</Name>
+        <DisplayName>XFCU</DisplayName>
+        <ComponentType>TapeCutterXFCU</ComponentType>
+        <IssSuffix />
+      </TapeCutter>
+      <TapeCutter>
+        <Name>Default</Name>
+        <DisplayName>Default</DisplayName>
+        <ComponentType>TapeCutterX</ComponentType>
+        <IssSuffix>.Download</IssSuffix>
+        <ExcludedHwId>0x38</ExcludedHwId>
+      </TapeCutter>
+    </X>
+    <SX>
+      <TapeCutter>
+        <Name>Default</Name>
+        <DisplayName>Default</DisplayName>
+        <ComponentType>TapeCutterSX</ComponentType>
+        <IssSuffix />
+      </TapeCutter>
+    </SX>
+  </TapeCutterTypes>
+  <VacuumTypes>
+    <VacuumType>
+      <Name>VacuumPump</Name>
+      <DisplayName SIRIO_TR="">Vacuum pump</DisplayName>
+    </VacuumType>
+    <VacuumType>
+      <Name>VenturiTube</Name>
+      <DisplayName SIRIO_TR="">Venturi vacuum</DisplayName>
+    </VacuumType>
+  </VacuumTypes>
+  <MachineIoTypes>
+    <SX>
+      <MachineIoType>
+        <Name>IoGreenWhiteSX</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenWhiteBuzzerSX</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps with buzzer</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedSX</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedBuzzerSX</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps with buzzer</DisplayName>
+      </MachineIoType>
+    </SX>
+    <DX>
+      <MachineIoType>
+        <Name>IoGreenWhiteDX</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedDX</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps</DisplayName>
+      </MachineIoType>
+    </DX>
+    <SX4>
+      <MachineIoType>
+        <Name>IoGreenWhiteSX4</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedSX4</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps</DisplayName>
+      </MachineIoType>
+    </SX4>
+    <DX4>
+      <MachineIoType>
+        <Name>IoGreenWhiteDX4</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedDX4</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps</DisplayName>
+      </MachineIoType>
+    </DX4>
+    <XS>
+      <MachineIoType>
+        <Name>IoGreenWhiteXS</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenWhiteBuzzerXS</Name>
+        <DisplayName SIRIO_TR="">Green/white indicator lamps with buzzer</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedXS</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps</DisplayName>
+      </MachineIoType>
+      <MachineIoType>
+        <Name>IoGreenYellowRedBuzzerXS</Name>
+        <DisplayName SIRIO_TR="">Green/yellow/red indicator lamps with buzzer</DisplayName>
+      </MachineIoType>
+    </XS>
+  </MachineIoTypes>
+  <AspHeadTypes>
+    <AspHeadType>
+      <Name>Asp</Name>
+      <DisplayName SIRIO_TR="">Installed</DisplayName>
+      <Category>eINSTALLED</Category>
+    </AspHeadType>
+    <AspHeadType>
+      <Name>DisabledAspHead</Name>
+      <DisplayName SIRIO_TR="">Installed (but disabled)</DisplayName>
+      <Category>eDISABLED</Category>
+    </AspHeadType>
+    <AspHeadType>
+      <Name />
+      <DisplayName SIRIO_TR="">Not installed</DisplayName>
+      <Category>eNOT_INSTALLED</Category>
+    </AspHeadType>
+  </AspHeadTypes>
+  <AspLocationTypes>
+    <SX>
+      <!--CP20-->
+      <AspLocationType>
+        <Name>SX12_InnerTable</Name>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>SX12_InnerTable</Name>
+        <DeviceLocation>Inner60SX</DeviceLocation>
+        <AspHead>eMOUNTED_ON_OTHER_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>SX12_OuterTable</Name>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>SX12_OuterTable</Name>
+        <AspHead>eMOUNTED_ON_OTHER_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </SX>
+    <X234S>
+      <!--SPS locations for the machines X2S, X3S, X4S-->
+      <AspLocationType>
+        <Name>X234S</Name>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X234S</Name>
+        <AspHead>eMOUNTED_ON_OTHER_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </X234S>
+    <X4iS_1R>
+      <AspLocationType>
+        <Name>X4iS_InnerTable_1R_2L</Name>
+        <DeviceLocation>X4iSPosition1</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_1R_2L</Name>
+        <DeviceLocation>X4iSPosition2</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </X4iS_1R>
+    <X4iS_2L>
+      <AspLocationType>
+        <Name>X4iS_InnerTable_1R_2L</Name>
+        <DeviceLocation>X4iSPosition1</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_1R_2L</Name>
+        <DeviceLocation>X4iSPosition2</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_MTF_2L</Name>
+        <DeviceLocation>X-Location_MTF</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </X4iS_2L>
+    <X4iS_1L>
+      <AspLocationType>
+        <Name>X4iS_InnerTable_1L_2R</Name>
+        <DeviceLocation>X4iSPosition1</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_1L_2R</Name>
+        <DeviceLocation>X4iSPosition2</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </X4iS_1L>
+    <X4iS_2R>
+      <AspLocationType>
+        <Name>X4iS_InnerTable_1L_2R</Name>
+        <DeviceLocation>X4iSPosition1</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_1L_2R</Name>
+        <DeviceLocation>X4iSPosition2</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name>X4iS_OuterTable_MTF_2R</Name>
+        <DeviceLocation>X-Location_MTF</DeviceLocation>
+        <AspHead>eMOUNTED_ON_THIS_SIDE</AspHead>
+      </AspLocationType>
+      <AspLocationType>
+        <Name />
+        <AspHead>eNONE</AspHead>
+      </AspLocationType>
+    </X4iS_2R>
+  </AspLocationTypes>
+  <AspMagazines>
+    <SX>
+      <Magazine Id="1">
+        <Name>AspMagazine_1</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+      <Magazine Id="2">
+        <Name>AspMagazine_2</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+      <Magazine Id="3">
+        <Name>AspMagazine_3</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+      <Magazine Id="4">
+        <Name>AspMagazine_4</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+    </SX>
+    <XS>
+      <Magazine Id="2">
+        <Name>AspMagazine_2</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+      <Magazine Id="4">
+        <Name>AspMagazine_4</Name>
+        <Type Individual="true" />
+        <PossibleTypes LinkNode="AspMagazineTypes" />
+        <NullTypeIsOk>true</NullTypeIsOk>
+      </Magazine>
+    </XS>
+  </AspMagazines>
+  <AspMagazineTypes>
+    <AspMagazineType>
+      <!--Name intentionally left empty-->
+      <Name />
+      <TypeCode>0x00</TypeCode>
+    </AspMagazineType>
+    <AspMagazineType>
+      <Name>L10</Name>
+      <TypeCode>0x11</TypeCode>
+    </AspMagazineType>
+    <AspMagazineType>
+      <Name>Q10</Name>
+      <TypeCode>0x12</TypeCode>
+    </AspMagazineType>
+    <AspMagazineType>
+      <Name>W5</Name>
+      <TypeCode>0x13</TypeCode>
+    </AspMagazineType>
+    <AspMagazineType>
+      <Name>Q10_MTF</Name>
+      <DisplayName>Q10 MTF</DisplayName>
+      <TypeCode>0x14</TypeCode>
+    </AspMagazineType>
+  </AspMagazineTypes>
+</AutoConfiguration>
