@@ -24,6 +24,8 @@ git add .
 d.h. ins Archiv bringen
 git commit
 
+4. normal weiter
+
 
 * Git Gui  (besser ist der GitHub-Client s.u.)
 =========
